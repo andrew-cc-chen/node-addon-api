@@ -19,6 +19,7 @@ function checkAsyncHooks() {
 
 test(require(`./build/${buildType}/binding.node`));
 test(require(`./build/${buildType}/binding_noexcept.node`));
+test(require(`./build/${buildType}/coverage.node`));
 
 function installAsyncHooksForTest() {
   return new Promise((resolve, reject) => {

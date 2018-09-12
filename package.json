@@ -48,6 +48,7 @@
   "scripts": {
     "pretest": "node-gyp rebuild -C test",
     "test": "node test",
+    "coverage": "if [ ! -d gcovr ]; then git clone -b 3.4 --depth=1 --single-branch git://github.com/gcovr/gcovr.git; fi && if [ ! -d coverage ]; then mkdir coverage; fi && ./gcovr/scripts/gcovr -r . --html --html-detail -o coverage/cxxcoverage.html --gcov-executable=/usr/bin/gcov && echo Coverage info can be found in $PWD/coverage/cxxcoverage.html",
     "doc": "doxygen doc/Doxyfile"
   },
   "version": "1.4.0"

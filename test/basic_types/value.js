@@ -5,6 +5,7 @@ const assert = require('assert');
 
 test(require(`../build/${buildType}/binding.node`));
 test(require(`../build/${buildType}/binding_noexcept.node`));
+test(require(`../build/${buildType}/coverage.node`));
 
 function test(binding) {
   const externalValue = binding.basic_types_value.createExternal();

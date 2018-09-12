@@ -10,6 +10,7 @@ if (process.argv[2] === 'fatal') {
 
 test(`./build/${buildType}/binding.node`);
 test(`./build/${buildType}/binding_noexcept.node`);
+test(`./build/${buildType}/coverage.node`);
 
 function test(bindingPath) {
   const binding = require(bindingPath);

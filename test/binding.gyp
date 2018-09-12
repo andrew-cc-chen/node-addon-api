@@ -64,5 +64,25 @@
         'GCC_ENABLE_CPP_EXCEPTIONS': 'NO',
       },
     },
+    {
+      'target_name': 'coverage',
+      'defines': [ 'NAPI_CPP_EXCEPTIONS', 'NAPI_DATA_VIEW_FEATURE' ],
+      'cflags': [ '-fprofile-arcs', '-ftest-coverage', '-O0', '-g' ],
+      'cflags_cc': [ '-fprofile-arcs', '-ftest-coverage', '-O0', '-g' ],
+      'ldflags': [ '-fprofile-arcs', '-ftest-coverage' ],
+      'cflags!': [ '-fno-exceptions', '-O3' ],
+      'cflags_cc!': [ '-fno-exceptions', '-O3' ],
+      'msvs_settings': {
+        'VCCLCompilerTool': {
+          'ExceptionHandling': 1,
+          'EnablePREfast': 'true',
+        },
+      },
+      'xcode_settings': {
+        'CLANG_CXX_LIBRARY': 'libc++',
+        'MACOSX_DEPLOYMENT_TARGET': '10.7',
+        'GCC_ENABLE_CPP_EXCEPTIONS': 'YES',
+      },
+    }
   ],
 }

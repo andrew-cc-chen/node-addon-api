@@ -6,6 +6,7 @@ const safeBuffer = require('safe-buffer');
 
 test(require(`./build/${buildType}/binding.node`));
 test(require(`./build/${buildType}/binding_noexcept.node`));
+test(require(`./build/${buildType}/coverage.node`));
 
 function test(binding) {
   testUtil.runGCTests([

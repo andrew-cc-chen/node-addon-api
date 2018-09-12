@@ -5,6 +5,7 @@ const common = require('./common');
 
 test(require(`./build/${buildType}/binding.node`));
 test(require(`./build/${buildType}/binding_noexcept.node`));
+test(require(`./build/${buildType}/coverage.node`));
 
 function test(binding) {
   assert.strictEqual(binding.promise.isPromise({}), false);
